@@ -14,16 +14,50 @@
             align-items: center;
             justify-content: center;
             min-height: 100vh;
-            background-color: #f9f9f9;
+            background-color: #f4f4f9;
+            color: #333;
         }
 
         header {
             text-align: center;
             margin-bottom: 20px;
+            padding: 20px;
+        }
+
+        header h1 {
+            font-size: 2rem;
+            margin: 0 0 10px;
+        }
+
+        header p {
+            font-size: 1rem;
+            margin: 0;
+        }
+
+        .iframe-container {
+            width: 90%;
+            max-width: 730px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background: #fff;
         }
 
         iframe {
-            border: 0;
+            display: block;
+            width: 100%;
+            height: 400px;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.5rem;
+            }
+
+            header p {
+                font-size: 0.9rem;
+            }
         }
     </style>
 </head>
@@ -32,6 +66,8 @@
         <h1>Support the Mount Everest 2025 Fundraiser</h1>
         <p>Help us reach our goal by contributing through the form below.</p>
     </header>
-    <iframe width="730" height="400" src="https://givealittle.co.nz/widget/light-/event/mount-everest2025" frameborder="0" seamless="seamless"></iframe>
+    <div class="iframe-container">
+        <iframe src="https://givealittle.co.nz/widget/light-/event/mount-everest2025" frameborder="0" seamless="seamless"></iframe>
+    </div>
 </body>
 </html>
