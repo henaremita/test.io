@@ -3,140 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HUMM 48hr Radiothon Countdown</title>
-    
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-    
+    <title>Mount Everest 2025 Fundraiser</title>
     <style>
         body {
+            font-family: Arial, sans-serif;
             margin: 0;
-            font-family: 'Roboto', Arial, sans-serif;
-            background-color: #121212;
+            padding: 0;
             display: flex;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
+            justify-content: center;
             min-height: 100vh;
+            background-color: #f9f9f9;
         }
 
-        #countdown {
-            background: linear-gradient(135deg, #ff6b6b 0%, #f0535f 100%);
+        header {
             text-align: center;
-            padding: 30px 40px;
-            border-radius: 15px;
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            color: white;
-            max-width: 500px;
-            width: 90%;
-            transition: transform 0.3s ease;
+            margin-bottom: 20px;
         }
 
-        #countdown:hover {
-            transform: scale(1.02);
-        }
-
-        #timertext {
-            font-size: 1.8rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 15px;
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-        }
-
-        #timer {
-            font-size: 2.2rem;
-            font-weight: 300;
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-        }
-
-        .timer-unit {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .timer-value {
-            font-weight: 700;
-        }
-
-        .timer-label {
-            font-size: 0.8rem;
-            text-transform: uppercase;
-            opacity: 0.8;
-        }
-
-        /* Responsive Adjustments */
-        @media screen and (max-width: 768px) {
-            #countdown {
-                padding: 20px;
-            }
-
-            #timertext {
-                font-size: 1.4rem;
-            }
-
-            #timer {
-                font-size: 1.8rem;
-                gap: 10px;
-            }
-        }
-
-        @media screen and (max-width: 480px) {
-            #timertext {
-                font-size: 1.2rem;
-            }
-
-            #timer {
-                font-size: 1.5rem;
-                flex-wrap: wrap;
-                gap: 15px;
-            }
+        iframe {
+            border: 0;
         }
     </style>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.countdown/2.2.0/jquery.countdown.min.js"></script>
 </head>
 <body>
-    <div id="countdown">
-        <div id="timertext">HUMM 48hr Radiothon 2024</div>
-        <div id="timer"></div>
-    </div>
-
-    <script>
-        var targetDate = new Date("December 7, 2024 12:00:00").getTime();
-
-        $('#timer').countdown(targetDate, function(event) {
-            var days = event.strftime('%D');
-            var hours = event.strftime('%H');
-            var minutes = event.strftime('%M');
-            var seconds = event.strftime('%S');
-
-            $(this).html(`
-                <div class="timer-unit">
-                    <div class="timer-value">${days}</div>
-                    <div class="timer-label">Days</div>
-                </div>
-                <div class="timer-unit">
-                    <div class="timer-value">${hours}</div>
-                    <div class="timer-label">Hours</div>
-                </div>
-                <div class="timer-unit">
-                    <div class="timer-value">${minutes}</div>
-                    <div class="timer-label">Minutes</div>
-                </div>
-                <div class="timer-unit">
-                    <div class="timer-value">${seconds}</div>
-                    <div class="timer-label">Seconds</div>
-                </div>
-            `);
-        });
-    </script>
+    <header>
+        <h1>Support the Mount Everest 2025 Fundraiser</h1>
+        <p>Help us reach our goal by contributing through the form below.</p>
+    </header>
+    <iframe width="730" height="400" src="https://givealittle.co.nz/widget/light-/event/mount-everest2025" frameborder="0" seamless="seamless"></iframe>
 </body>
 </html>
